@@ -1,3 +1,27 @@
+"""
+multi_tool_agent
+================
+A multi-agent AI system to control a Debian Linux VM via natural language.
+
+Author  : Suchita Kunghatkar (pass123666)
+GitHub  : https://github.com/pass123666/multi_tool_agent
+Model   : Gemini 2.5 Flash (Google ADK)
+Version : 1.0.0
+
+Description:
+    Type commands in plain English. The root agent routes your request
+    to the right specialist sub-agent, which runs the actual SSH command
+    on your Debian VM and explains the result.
+
+Sub-agents:
+    - ssh_agent          : raw bash commands, connectivity
+    - services_agent     : install packages, manage services
+    - postgresql_agent   : PostgreSQL database operations
+    - mongodb_agent      : MongoDB operations
+    - storage_agent      : backups, file listing, archives
+    - system_info_agent  : disk, memory, CPU, uptime
+    - docker_agent       : Docker containers and images
+"""
 import os
 import subprocess
 import paramiko
